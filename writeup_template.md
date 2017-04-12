@@ -11,6 +11,7 @@
 [image4]: ./writeup/woflip.jpg "without flip image"
 [image5]: ./writeup/wflip.jpg "with flip image"
 [image6]: ./writeup/cropped.jpg "cropped image"
+[image7]: ./writeup/nvdia.jpg "NVDIA Architecture"
 
 
 ## Introduction
@@ -77,8 +78,6 @@ I finally randomly shuffled the data set and put 20% of the data into a validati
 After the collection process, I had ## X ## number of data points. 
 
 
-
-
 ### Data Preprocessing
 
 #### Normalization
@@ -98,30 +97,26 @@ For example, here is an image that has then been cropped:
 
 ### Model Architecture
 
-This architecture is based on a LeNet model and to avoid overfitting the dropout technique is applied.
+This convolutional neural network architecture is from NVIDIA's End to End Learning for Self-Driving Cars paper which is shown in the next image.
 
-My final model consisted of the following layers:
-
-| Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 Grayscale image   							| 
-| Convolution 5x5     	| 1x1 stride, valid padding, output 28x28x6 	|
-| RELU					|	-											|
-| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
-| Convolution 5x5     	| 1x1 stride, valid padding, output 10x10x16 	|
-| RELU					| -											|
-| Max pooling	      	| 2x2 stride,  output 5x5x16 				|
-| Flatten  | output 400
-| Fully connected		| output 120  |
-| RELU					|			-									|
-| Dropout					|		-										|
-| Fully connected		| output 84  |
-| RELU					|		-										|
-| Dropout					|	-											|
-| Fully connected		| output 43  |
-| Softmax				|    -     									|
+![alt text][image7]
 
 
+
+The network consists of 9 layers, including a normalization layer, 5 convolutional layers
+and 3 fully connected layers. The input image is split into YUV planes and passed to the network.
+The first layer of the network performs image normalization. The normalizer is hard-coded and is not
+adjusted in the learning process. Performing normalization in the network allows the normalization
+scheme to be altered with the network architecture and to be accelerated via GPU processing.
+The convolutional layers were designed to perform feature extraction and were chosen empirically
+through a series of experiments that varied layer configurations. We use strided convolutions in the
+first three convolutional layers with a 2×2 stride and a 5×5 kernel and a non-strided convolution
+with a 3×3 kernel size in the last two convolutional layers.
+We follow the five convolutional layers with three fully connected layers leading to an output control
+value which is the inverse turning radius. The fully connected layers are designed to function as a
+controller for steering, but we note that by training the system end-to-end, it is not possible to make
+a clean break between which parts of the network function primarily as feature extractor and which
+serve as controller
 
 ### Training
 
