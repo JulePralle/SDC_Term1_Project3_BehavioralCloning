@@ -10,8 +10,7 @@
 [image3]: ./writeup/right.jpg "right image"
 [image4]: ./writeup/woflip.jpg "without flip image"
 [image5]: ./writeup/wflip.jpg "with flip image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image6]: ./writeup/cropped.jpg "cropped image"
 
 
 ## Introduction
@@ -95,7 +94,7 @@ For example, here is an image that has then been cropped:
 
 |original image|cropped image|
 |:--------:|:------------:|
-|![alt text][image6]| ![alt text][image7]| 
+|![alt text][image4]| ![alt text][image6]| 
 
 ### Model Architecture
 
