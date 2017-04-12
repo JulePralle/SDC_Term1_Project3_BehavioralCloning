@@ -9,7 +9,7 @@
 [image2]: ./writeup/center.jpg "center image"
 [image3]: ./writeup/right.jpg "right image"
 [image4]: ./writeup/woflip.jpg "without flip image"
-[image5]: ./writeup/wflip.png "with flip image"
+[image5]: ./writeup/wflip.jpg "with flip image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
 
