@@ -6,7 +6,7 @@
 ---
 [//]: # (Image References)
 
-[video1]: ./writeup/run1.mp4 "drive Video"
+[video1]: writeup/run1.mp4 "drive Video"
 [image2]: ./examples/placeholder.png "Grayscaling"
 [image3]: ./examples/placeholder_small.png "Recovery Image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
