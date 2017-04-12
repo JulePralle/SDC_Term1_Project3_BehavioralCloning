@@ -6,9 +6,9 @@
 ---
 [//]: # (Image References)
 
-[video1]: writeup/run1.mp4 "drive Video"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
+[image1]: ./writeup/left.png "left image"
+[image2]: ./writeup/center.png "center image"
+[image3]: ./writeup/right.png "right image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
@@ -50,7 +50,7 @@ python drive.py model.h5
 ### Creating the Data
 The data to train and validate the model will be created with the simulator of the Udacty. The data contains images which are taken with a frequency of 10h and the measurements such as steering angle, throttle, brake and speed. Here we are only using the steering angles because we predict only this measuremnet to drive the car autonomously. For every steering angle data point three images are generated. There is an image for the center, left and right.
 
-![image1](./writeup/left.png) ![image2](./writeup/center.png) ![image3](./writeup/right.png) 
+![alt text][image1] ![alt text][image2] ![alt text][image3]
 
 
 ### Data Processing
