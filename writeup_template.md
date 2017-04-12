@@ -11,7 +11,7 @@
 [image4]: ./writeup/woflip.jpg "without flip image"
 [image5]: ./writeup/wflip.jpg "with flip image"
 [image6]: ./writeup/cropped.jpg "cropped image"
-[image7]: ./writeup/nvdia.jpg "NVDIA Architecture"
+[image7]: ./writeup/nvidia.jpg "NVDIA Architecture"
 
 
 ## Introduction
