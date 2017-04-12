@@ -1,10 +1,11 @@
-# **Behavioral Cloning** 
+# **Nanodegree: Self-Driving Car Engineer** 
 
-## Writeup JP
+## Deep Learning
 
 ---
 
 **Behavioral Cloning Project**
+In this project a car should drive autonomously on a track in a simulator build from the Udacity. A convolution neural network should be build and trained to predict the steering angle of the car. The network needs to clon the behavior of the training data which will be created with the simulator before.
 
 The goals / steps of this project are the following:
 * Use the simulator to collect data of good driving behavior
@@ -16,7 +17,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
+[video1]: ./examples/placeholder.png "Model Visualization"
 [image2]: ./examples/placeholder.png "Grayscaling"
 [image3]: ./examples/placeholder_small.png "Recovery Image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
