@@ -6,9 +6,9 @@
 ---
 [//]: # (Image References)
 
-[image1]: ./writeup/left.jpg=250x "left image"
-[image2]: ./writeup/center.jpg=250x "center image"
-[image3]: ./writeup/right.jpg=250x "right image"
+[image]: ./writeup/left.jpg=250x "left image"
+[image]: ./writeup/center.jpg=250x "center image"
+[image]: ./writeup/right.jpg=250x "right image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
