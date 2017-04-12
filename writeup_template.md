@@ -71,16 +71,18 @@ To augment the data sat, I also flipped images and angles thinking that this wou
 |![alt text][image4]| ![alt text][image5]| 
 
 
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-Etc ....
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+After the collection process, I had ## X ## number of data points. 
 
 
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
 
 
 ### Data Processing
+
+The data first got nomrmalized using the keras lambda layer. Within the lambda layer each element of the data is getting normalized by dividing by the maximum value of an image pixel.
+
+In a second step the images got mean centered by substracting 0.5 also within the lambda layer.
 
 
 ### Model Architecture
