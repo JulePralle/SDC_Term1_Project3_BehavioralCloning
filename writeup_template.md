@@ -1,6 +1,5 @@
 # **Self-Driving Car Engineer - Nanodegree** 
-
-# Deep Learning
+### Deep Learning
 # Behavioral Cloning Project
 
 ---
@@ -48,14 +47,38 @@ python drive.py model.h5
 ## Implementation
 
 ### Creating the Data
-The data to train and validate the model will be created with the simulator of the Udacty. The data contains images which are taken with a frequency of 10h and the measurements such as steering angle, throttle, brake and speed. Here we are only using the steering angles because we predict only this measuremnet to drive the car autonomously. For every steering angle data point three images are generated. There is an image for the center, left and right.
+The data to train and validate the model will be created with the simulator of the Udacty. The data contains images which are taken with a frequency of 10h and the measurements such as steering angle, throttle, brake and speed. Here we are only using the steering angles because we predict only this measuremnet to drive the car autonomously. For every steering angle data point three images are generated. There is an image from the center, left and right camera.
 
 |left|center|right|
 |:--------:|:------------:|:------------:|
 |![alt text][image1]| ![alt text][image2]| ![alt text][image3]|
 
+To capture good driving behavior, I first recorded two laps on track one using center lane driving. 
+
+I then recorded  one lap the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn how to correct a driving fault. 
+.... These images show what a recovery looks like starting from ... :
+
+![alt text][image3]
+![alt text][image4]
+![alt text][image5]
+
+Then I repeated this process on track two in order to get more data points.
+
+To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+
+![alt text][image6]
+![alt text][image7]
+
+Etc ....
+
+After the collection process, I had X number of data points. I then preprocessed this data by ...
+
+
+I finally randomly shuffled the data set and put Y% of the data into a validation set. 
+
 
 ### Data Processing
+
 
 ### Model Architecture
 
