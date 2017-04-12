@@ -16,11 +16,9 @@
 
 
 ### Introduction
-
+In this project a car should learn how to drive autonomously on a track in a simulator cloning human driving behaviour. A convolution neural network should be build and trained to predict the steering angle of the car. The data for training will be also created with the simulator build by the Udacity.
 
 ![result video](./writeup/run1.gif) 
-
-In this project a car should drive autonomously on a track in a simulator build from the Udacity using deep learning. A convolution neural network should be build and trained to predict the steering angle of the car. The network needs to clon the behavior of the training data which will be created with the simulator before.
 
 The goals / steps of this project are the following:
 * Use the simulator to collect data of good driving behavior
@@ -31,7 +29,7 @@ The goals / steps of this project are the following:
 
 
 ---
-### Files and Code
+## Files and Code
 
 My project includes the following files:
 * model.py containing the script to create and train the model
@@ -39,7 +37,7 @@ My project includes the following files:
 * model.h5 containing a trained convolution neural network 
 * this writeup.md summarizing the results
 
-## Run the Model
+#### Run the Model
 The model.py file the code for training and saving the convolution neural network as model.h5.
 
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
@@ -47,19 +45,21 @@ Using the Udacity provided simulator and my drive.py file, the car can be driven
 python drive.py model.h5
 ```
 
-### Implementation
+## Implementation
 
-## Creating the Data
-
-## Data Processing
-
-## Model Architecture
+### Creating the Data
+The data to train and validate the model will be created with the simulator of the Udacty. The data contains images which are taken with a frequency of 10h and the measurements such as steering angle, throttle, brake and speed. Here we are only using the steering angles because we predict only this measuremnet to drive the car autonomously. For every steering angle data point three images are generated. There is an image for the center, left and right.
 
 
-### Results
+### Data Processing
+
+### Model Architecture
 
 ### Taining
 
+### Results
+
+## Summary
 
 
 ####1. An appropriate model architecture has been employed
