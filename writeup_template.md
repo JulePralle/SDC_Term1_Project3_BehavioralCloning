@@ -1,5 +1,5 @@
 # **Self-Driving Car Engineer - Nanodegree** 
-### Deep Learning
+## ---Deep Learning---
 # Behavioral Cloning Project
 
 ---
@@ -8,8 +8,8 @@
 [image1]: ./writeup/left.jpg "left image"
 [image2]: ./writeup/center.jpg "center image"
 [image3]: ./writeup/right.jpg "right image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
+[image4]: ./writeup/woflip.jpg "without flip image"
+[image5]: ./writeup/wflip.png "with flip image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
 
@@ -60,12 +60,17 @@ These video shows what a recovery looks like starting from the right side back t
 
 ![recovering video](./writeup/recovering.gif) 
 
-Then I repeated this process on track two in order to get more data points.
+Then I also recorded on lap from track two in order to get more data points.
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+I also recorded one lap driving the track in the other direction means clockwise. The first reason for that is to collect more right turns because the track is a loop and contains more left turns then right turns and the second reason is again to collect more data points.
 
-![alt text][image6]
-![alt text][image7]
+To augment the data sat, I also flipped images and angles thinking that this would also equalize the amount of left and right turns and creates more data of course. For that randomly chose just one image of a data point to not make the data too big. For example, here is an image that has then been flipped:
+
+|original|flipped|
+|:--------:|:------------:|:------------:|
+|![alt text][image4]| ![alt text][image5]| 
+
+
 
 Etc ....
 
