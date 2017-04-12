@@ -78,7 +78,7 @@ After the collection process, I had ## X ## number of data points.
 
 
 
-### Data Processing
+### Data Preprocessing
 
 The data first got nomrmalized using the keras lambda layer. Within the lambda layer each element of the data is getting normalized by dividing by the maximum value of an image pixel.
 
