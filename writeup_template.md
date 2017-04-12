@@ -56,11 +56,9 @@ The data to train and validate the model will be created with the simulator of t
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. 
 
 I then recorded  one lap the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn how to correct a driving fault. 
-.... These images show what a recovery looks like starting from ... :
+These video shows what a recovery looks like starting from the right side back to the center
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+![recovering video](./writeup/recovering.gif) 
 
 Then I repeated this process on track two in order to get more data points.
 
