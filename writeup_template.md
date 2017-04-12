@@ -66,8 +66,8 @@ I also recorded one lap driving the track in the other direction means clockwise
 
 To augment the data sat, I also flipped images and angles thinking that this would also equalize the amount of left and right turns and creates more data of course. For that randomly chose just one image of a data point to not make the data too big. For example, here is an image that has then been flipped:
 
-|original|flipped image|
-|:--------:|:------------:|:------------:|
+|original image|flipped image|
+|:--------:|:------------:|
 |![alt text][image4]| ![alt text][image5]| 
 
 
