@@ -87,9 +87,16 @@ In a second step the images got mean centered by substracting 0.5 also within th
 
 ### Model Architecture
 
-### Taining
+
+
+### Training
+
+### Solution Design Approach
 
 ### Results
+
+
+
 
 ## Summary
 
