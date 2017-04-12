@@ -1,21 +1,20 @@
 # **Self-Driving Car Engineer - Nanodegree** 
-
-# Deep Learning
-## Behavioral Cloning Project
+### Deep Learning
+# Behavioral Cloning Project
 
 ---
 [//]: # (Image References)
 
-[video1]: writeup/run1.mp4 "drive Video"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
+[image1]: ./writeup/left.jpg "left image"
+[image2]: ./writeup/center.jpg "center image"
+[image3]: ./writeup/right.jpg "right image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
 
 
-### Introduction
+## Introduction
 In this project a car should learn how to drive autonomously on a track in a simulator cloning human driving behaviour. A convolution neural network should be build and trained to predict the steering angle of the car. The data for training will be also created with the simulator build by the Udacity.
 
 ![result video](./writeup/run1.gif) 
@@ -48,10 +47,38 @@ python drive.py model.h5
 ## Implementation
 
 ### Creating the Data
-The data to train and validate the model will be created with the simulator of the Udacty. The data contains images which are taken with a frequency of 10h and the measurements such as steering angle, throttle, brake and speed. Here we are only using the steering angles because we predict only this measuremnet to drive the car autonomously. For every steering angle data point three images are generated. There is an image for the center, left and right.
+The data to train and validate the model will be created with the simulator of the Udacty. The data contains images which are taken with a frequency of 10h and the measurements such as steering angle, throttle, brake and speed. Here we are only using the steering angles because we predict only this measuremnet to drive the car autonomously. For every steering angle data point three images are generated. There is an image from the center, left and right camera.
+
+|left|center|right|
+|:--------:|:------------:|:------------:|
+|![alt text][image1]| ![alt text][image2]| ![alt text][image3]|
+
+To capture good driving behavior, I first recorded two laps on track one using center lane driving. 
+
+I then recorded  one lap the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn how to correct a driving fault. 
+.... These images show what a recovery looks like starting from ... :
+
+![alt text][image3]
+![alt text][image4]
+![alt text][image5]
+
+Then I repeated this process on track two in order to get more data points.
+
+To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+
+![alt text][image6]
+![alt text][image7]
+
+Etc ....
+
+After the collection process, I had X number of data points. I then preprocessed this data by ...
+
+
+I finally randomly shuffled the data set and put Y% of the data into a validation set. 
 
 
 ### Data Processing
+
 
 ### Model Architecture
 
