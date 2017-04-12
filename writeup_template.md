@@ -53,6 +53,8 @@ The data to train and validate the model will be created with the simulator of t
 |:--------:|:------------:|:------------:|
 |![alt text][image1]| ![alt text][image2]| ![alt text][image3]|
 
+The three images have all the same steering angle, which means that the model would learn to steer to the right or left when looking at an right or left image to recover to the center. To prevent this, I will add or substract an correction value to steering angle. 
+
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. 
 
 I then recorded  one lap the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn how to correct a driving fault. 
@@ -80,12 +82,45 @@ After the collection process, I had ## X ## number of data points.
 
 ### Data Preprocessing
 
+#### Normalization
 The data first got nomrmalized using the keras lambda layer. Within the lambda layer each element of the data is getting normalized by dividing by the maximum value of an image pixel.
 
+#### Mean Center
 In a second step the images got mean centered by substracting 0.5 also within the lambda layer.
 
+#### Cropping
+Not all the imformation in the images are important to predict the steering angle. So with the keras cropping2D layer I cropped each image on top and bottom to take out the sky and the hood of the car. This might help the model to train faster.
+
+For example, here is an image that has then been cropped:
+
+|original image|cropped image|
+|:--------:|:------------:|
+|![alt text][image6]| ![alt text][image7]| 
 
 ### Model Architecture
+
+This architecture is based on a LeNet model and to avoid overfitting the dropout technique is applied.
+
+My final model consisted of the following layers:
+
+| Layer         		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Input         		| 32x32x1 Grayscale image   							| 
+| Convolution 5x5     	| 1x1 stride, valid padding, output 28x28x6 	|
+| RELU					|	-											|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
+| Convolution 5x5     	| 1x1 stride, valid padding, output 10x10x16 	|
+| RELU					| -											|
+| Max pooling	      	| 2x2 stride,  output 5x5x16 				|
+| Flatten  | output 400
+| Fully connected		| output 120  |
+| RELU					|			-									|
+| Dropout					|		-										|
+| Fully connected		| output 84  |
+| RELU					|		-										|
+| Dropout					|	-											|
+| Fully connected		| output 43  |
+| Softmax				|    -     									|
 
 
 
