@@ -12,6 +12,7 @@
 [image5]: ./writeup/wflip.jpg "with flip image"
 [image6]: ./writeup/cropped.jpg "cropped image"
 [image7]: ./writeup/nvidia.jpg "NVDIA Architecture"
+[image8]: ./writeup/loss.jpg "Output of loss metrics"
 
 
 ## Introduction
@@ -53,7 +54,7 @@ The data to train and validate the model will be created with the simulator of t
 |:--------:|:------------:|:------------:|
 |![alt text][image1]| ![alt text][image2]| ![alt text][image3]|
 
-The three images have all the same steering angle, which means that the model would learn to steer to the right or left when looking at an right or left image to recover to the center. To prevent this, I will add or substract an correction value to steering angle. 
+The three images have all the same steering angle, which means that the model would learn to steer to the right or left when looking at an right or left image to recover to the center. To prevent this, I will add or substract an correction value of 0.25 to steering angle. 
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. 
 
@@ -97,30 +98,40 @@ For example, here is an image that has then been cropped:
 
 ### Model Architecture
 
-This convolutional neural network architecture is from NVIDIA's End to End Learning for Self-Driving Cars paper which is shown in the next image.
+This convolutional neural network (CNN) architecture is from NVIDIA's End to End Learning for Self-Driving Cars paper [the link](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf). The CNN is trained to map raw pixels from a single front-facing camera directly to steering commands. The system automatically learns internal representations of the necessary processing steps such as detecting useful road features with only the human steering angle as the training signal. This is pretty much the same usecase we have in this project.  
+
+The CNN is shown in the image below.
+
 
 ![alt text][image7]
 
 
 
 The network consists of 9 layers, including a normalization layer, 5 convolutional layers
-and 3 fully connected layers. The input image is split into YUV planes and passed to the network.
-The first layer of the network performs image normalization. The normalizer is hard-coded and is not
-adjusted in the learning process. Performing normalization in the network allows the normalization
-scheme to be altered with the network architecture and to be accelerated via GPU processing.
-The convolutional layers were designed to perform feature extraction and were chosen empirically
-through a series of experiments that varied layer configurations. We use strided convolutions in the
-first three convolutional layers with a 2×2 stride and a 5×5 kernel and a non-strided convolution
-with a 3×3 kernel size in the last two convolutional layers.
-We follow the five convolutional layers with three fully connected layers leading to an output control
-value which is the inverse turning radius. The fully connected layers are designed to function as a
-controller for steering, but we note that by training the system end-to-end, it is not possible to make
-a clean break between which parts of the network function primarily as feature extractor and which
-serve as controller
+and 3 fully connected layers. The normalization layer in my case got already inplemented in the data preprocessing step. 
+The first three convolutional layers use a 2×2 stride and a 5×5 kernel. The last two convolutional layers are non-strided convolutions
+with a 3×3 kernel size. The five convolutional layer are followed by three fully connected layers leading to an output control
+value.
+
 
 ### Training
 
-### Solution Design Approach
+To train the model I did not need to implement a generator. I used the Adam optimizer within a 1e-4 learning rate. The amount of epochs were choosen by try an error and in the end XXXX epochs worked well.
+
+To output the vaidation and train loss metrics the verbose parameter were added to the keras model.fit() method. The output of the loss metrics is shown in the following image:
+
+![alt text][image8]
+
+### My Approach
+In this paragraph I am going to decribe step by step my approch which leads me to the above presented soultion.
+1. Collecting the full data set with the simulator
+2. Create the model.py with:
+  * loading the data and fill two arrays with the image data and steering angle data, which will be the input data for the CNN later
+  * correct the steering angle of left and right images
+  * flipping one image per data point and add them to the data set
+  * 
+  
+
 
 ### Results
 
