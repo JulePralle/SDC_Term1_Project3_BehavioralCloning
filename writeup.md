@@ -102,7 +102,7 @@ For example, here is an image that has then been cropped:
 
 ### Model Architecture
 
-This convolutional neural network (CNN) architecture is from NVIDIA's End to End Learning for Self-Driving Cars paper [the link](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf). The CNN is trained to map raw pixels from a single front-facing camera directly to steering commands. The system automatically learns internal representations of the necessary processing steps such as detecting useful road features with only the human steering angle as the training signal. This is pretty much the same usecase we have in this project.  
+This convolutional neural network (CNN) architecture is from NVIDIA's End to End Learning for Self-Driving Cars paper ([link](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)). The CNN is trained to map raw pixels from a single front-facing camera directly to steering commands. The system automatically learns internal representations of the necessary processing steps such as detecting useful road features with only the human steering angle as the training signal. This is pretty much the same usecase we have in this project.  
 
 The CNN is shown in the image below.
 
