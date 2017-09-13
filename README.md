@@ -16,7 +16,7 @@
 
 
 ## Introduction
-In this project a car should learn how to drive autonomously on a track in a simulator cloning human driving behaviour. A convolution neural network should be build and trained to predict the steering angle of the car. The data for training will also be created with the simulator build by Udacity.
+In this project a car should learn how to drive autonomously on a track in a simulator cloning human driving behaviour using TensorFlow and Keras. A convolution neural network should be build and trained to predict the steering angle of the car. The data for training will also be created with the simulator build by Udacity.
 
 ![result video](./writeup/run1.gif) 
 
